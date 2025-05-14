@@ -13,15 +13,20 @@ struct ExploreView: View {
         NavigationStack {
             ScrollView {
                 SearchFilterBar()
-                LazyVStack (spacing: 50) {
+                LazyVStack (spacing: 30) {
                     ForEach (0 ... 10, id: \.self) { listing in
-                        ListingItemView()
-                            .frame(height: 450)
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                        NavigationLink(value: listing) {
+                            ListingItemView()
+                                .frame(height: 450)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }
                     }
 
                 }
                 .padding()
+            }
+            .navigationDestination(for: Int.self) { listing in
+                Text("Listing details...")
             }
         }
     }

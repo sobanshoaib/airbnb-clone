@@ -15,11 +15,11 @@ struct SearchFilterBar: View {
                 Image(systemName: "magnifyingglass")
                 
                 VStack (alignment: .leading) {
-                    Text("Miami")
+                    Text("Where to?")
                         .bold()
                     
                     Text("Any Week - Any Time")
-                        .foregroundColor(.gray)
+                        .foregroundStyle(.gray)
                 }
             }
             Spacer()
