@@ -55,9 +55,37 @@ struct ListingDetailVIew: View {
             
             VStack {
                 HStack {
-                    
+                    HStack (spacing: 15){
+                        Image(systemName: "door.left.hand.open")
+                        VStack (alignment: .leading){
+                            Text("Self check-in")
+                                .bold()
+                            Text("Check yourself in with the keypad")
+                                .foregroundStyle(.gray)
+                        }
+                        .font(.callout)
+                    }
+                    .padding()
+                    Spacer()
+                }
+                
+                HStack {
+                    HStack (spacing: 15){
+                        Image(systemName: "medal")
+                        VStack (alignment: .leading){
+                            Text("Superhost")
+                                .bold()
+                            Text("Experienced hosts")
+                                .foregroundStyle(.gray)
+                        }
+                        .font(.callout)
+                    }
+                    .padding()
+                    Spacer()
                 }
             }
+            
+            Divider()
             
         }
     }
