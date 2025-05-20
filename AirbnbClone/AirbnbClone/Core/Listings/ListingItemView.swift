@@ -17,16 +17,20 @@ struct ListingItemView: View {
     ]
     var body: some View {
         VStack {
-            TabView {
-                ForEach (images, id: \.self) { image in
-                    Image(image)
-                        .resizable()
-                        .scaledToFill()
-                }
-            }
-            .frame(height: 320)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            .tabViewStyle(.page)
+//            TabView {
+//                ForEach (images, id: \.self) { image in
+//                    Image(image)
+//                        .resizable()
+//                        .scaledToFill()
+//                }
+//            }
+//            .frame(height: 320)
+//            .clipShape(RoundedRectangle(cornerRadius: 20))
+//            .tabViewStyle(.page)
+            ListingImageCarouselView()
+                .frame(height: 320)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+            
                 
             
             HStack (alignment: .top) {
